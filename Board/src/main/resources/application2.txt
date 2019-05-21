@@ -1,0 +1,17 @@
+spring: 
+  profiles:  
+    active: 
+    - Local
+    
+---
+spring:     
+  profiles: Local
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_board?serverTimezone=UTC
+    username: root
+    password: noel
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+server:
+  port: 8081
+  

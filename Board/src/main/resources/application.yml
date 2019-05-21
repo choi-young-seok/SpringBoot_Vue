@@ -1,0 +1,24 @@
+spring: 
+  profiles:  
+    active: 
+    - dbLocal
+    
+---
+spring:
+  server:
+    port: 8080
+  
+---
+spring:    
+  thymeleaf:
+    prefix: classpath:/static/
+
+---
+spring:     
+  profiles: dbLocal
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_blog?serverTimezone=UTC
+    username: root
+    password: noel
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
